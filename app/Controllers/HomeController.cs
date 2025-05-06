@@ -15,7 +15,46 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var proyectos = ObtenerProyectos().Take(3).ToList();
+        var modelo = new HomeIndexViewModel() { Proyectos = proyectos };
+        return View(modelo);
+    }
+
+    public List<Proyecto> ObtenerProyectos()
+    {
+        return new List<Proyecto>() {
+            new Proyecto()
+                {
+                Titulo="Amazon",
+                Descripcion="Amazon es una de las empresas más grandes del mundo",
+                Link="http://amazon.com",
+                ImagenUrl="~/img/amazin.png"
+                },
+
+                 new Proyecto()
+                {
+                Titulo="New York Time",
+                Descripcion="Pagina de noticias en React",
+                Link="https://www.nytimes.com/",
+                ImagenUrl="~/img/nyt.png"
+                },
+
+                 new Proyecto()
+                {
+                Titulo="Reddit",
+                Descripcion="Red social",
+                Link="https://www.reddit.com/",
+                ImagenUrl="~/img/reddit.png"
+                },
+
+                 new Proyecto()
+                {
+                Titulo="Steam",
+                Descripcion="Amazon es una de las empresas más grandes del mundo",
+                Link="https://store.steampowered.com/",
+                ImagenUrl="~/img/steam.png"
+                },
+        };
     }
 
     public IActionResult Privacy()
