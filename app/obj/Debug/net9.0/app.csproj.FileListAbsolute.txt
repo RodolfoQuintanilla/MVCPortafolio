@@ -96,4 +96,4 @@ C:\Users\rqm\OneDrive\Documentos\programer\MVCPortafolio\app\obj\Debug\net9.0\re
 C:\Users\rqm\OneDrive\Documentos\programer\MVCPortafolio\app\obj\Debug\net9.0\app.pdb
 C:\Users\rqm\OneDrive\Documentos\programer\MVCPortafolio\app\obj\Debug\net9.0\app.genruntimeconfig.cache
 C:\Users\rqm\OneDrive\Documentos\programer\MVCPortafolio\app\obj\Debug\net9.0\ref\app.dll
-C:\Users\rqm\OneDrive\Documentos\programer\MVCPortafolio\app\obj\Debug\net9.0\compressed\jonu2yg2el-8ghes897u8.gz
+C:\Users\rqm\OneDrive\Documentos\programer\MVCPortafolio\app\obj\Debug\net9.0\compressed\jonu2yg2el-zbonk8cwoo.gz

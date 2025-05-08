@@ -1,60 +1,50 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using app.Models;
+using app.Servicios;
 
 namespace app.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IRespositorioProyectos repositorioProyectos;
+    private readonly ServicioDelimitado servicioDelimitado;
+    private readonly ServicioTransitorio servicioTransitorio;
+    private readonly ServicioUnico servicioUnico;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger,
+    IRespositorioProyectos repositorioProyectos,
+    ServicioDelimitado servicioDelimitado,
+    ServicioTransitorio servicioTransitorio,
+    ServicioUnico servicioUnico
+    )
     {
+        this.repositorioProyectos = repositorioProyectos;
+        this.servicioDelimitado = servicioDelimitado;
+        this.servicioTransitorio = servicioTransitorio;
+        this.servicioUnico = servicioUnico;
         _logger = logger;
     }
 
     public IActionResult Index()
     {
-        var proyectos = ObtenerProyectos().Take(3).ToList();
-        var modelo = new HomeIndexViewModel() { Proyectos = proyectos };
-        return View(modelo);
-    }
 
-    public List<Proyecto> ObtenerProyectos()
-    {
-        return new List<Proyecto>() {
-            new Proyecto()
-                {
-                Titulo="Amazon",
-                Descripcion="Amazon es una de las empresas más grandes del mundo",
-                Link="http://amazon.com",
-                ImagenUrl="~/img/amazin.png"
-                },
-
-                 new Proyecto()
-                {
-                Titulo="New York Time",
-                Descripcion="Pagina de noticias en React",
-                Link="https://www.nytimes.com/",
-                ImagenUrl="~/img/nyt.png"
-                },
-
-                 new Proyecto()
-                {
-                Titulo="Reddit",
-                Descripcion="Red social",
-                Link="https://www.reddit.com/",
-                ImagenUrl="~/img/reddit.png"
-                },
-
-                 new Proyecto()
-                {
-                Titulo="Steam",
-                Descripcion="Amazon es una de las empresas más grandes del mundo",
-                Link="https://store.steampowered.com/",
-                ImagenUrl="~/img/steam.png"
-                },
+        var proyectos = repositorioProyectos.ObtenerProyectos().Take(3).ToList();
+        var guiaViewModel = new EjemploGUIDViewModel()
+        {
+            Delimitado = servicioDelimitado.ObtenerGuid,
+            Trancitorio = servicioTransitorio.ObtenerGuid,
+            Unico = servicioUnico.ObtenerGuid
         };
+
+        var modelo = new HomeIndexViewModel()
+        {
+            Proyectos = proyectos,
+            EjemploGUID_1 = guiaViewModel
+
+        };
+        return View(modelo);
     }
 
     public IActionResult Privacy()

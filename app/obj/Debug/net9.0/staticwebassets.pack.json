@@ -17,12 +17,32 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\rqm\\OneDrive\\Documentos\\programer\\MVCPortafolio\\app\\wwwroot\\img\\amazon.PNG",
+      "PackagePath": "staticwebassets\\img\\amazon.PNG"
+    },
+    {
+      "Id": "C:\\Users\\rqm\\OneDrive\\Documentos\\programer\\MVCPortafolio\\app\\wwwroot\\img\\dotnet-imagen-2.png",
+      "PackagePath": "staticwebassets\\img\\dotnet-imagen-2.png"
+    },
+    {
       "Id": "C:\\Users\\rqm\\OneDrive\\Documentos\\programer\\MVCPortafolio\\app\\wwwroot\\img\\foto.png",
       "PackagePath": "staticwebassets\\img\\foto.png"
     },
     {
       "Id": "C:\\Users\\rqm\\OneDrive\\Documentos\\programer\\MVCPortafolio\\app\\wwwroot\\img\\image.png",
       "PackagePath": "staticwebassets\\img\\image.png"
+    },
+    {
+      "Id": "C:\\Users\\rqm\\OneDrive\\Documentos\\programer\\MVCPortafolio\\app\\wwwroot\\img\\nyt .PNG",
+      "PackagePath": "staticwebassets\\img\\nyt .PNG"
+    },
+    {
+      "Id": "C:\\Users\\rqm\\OneDrive\\Documentos\\programer\\MVCPortafolio\\app\\wwwroot\\img\\reddit .PNG",
+      "PackagePath": "staticwebassets\\img\\reddit .PNG"
+    },
+    {
+      "Id": "C:\\Users\\rqm\\OneDrive\\Documentos\\programer\\MVCPortafolio\\app\\wwwroot\\img\\steam.PNG",
+      "PackagePath": "staticwebassets\\img\\steam.PNG"
     },
     {
       "Id": "C:\\Users\\rqm\\OneDrive\\Documentos\\programer\\MVCPortafolio\\app\\wwwroot\\js\\site.js",
